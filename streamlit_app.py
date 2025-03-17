@@ -4,6 +4,10 @@ import joblib
 def main():
   st.title('Dermatology Machine Learning')
 
-  st.write('This app using machine learning')
+  st.info('This app using machine learning')
 
-if __name__
+  #Input data by user
+  erythema = st.slider('Erythema', min_value=0, max_value=3, value=2)
+
+if __name__ == "__main__":
+  main()
