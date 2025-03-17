@@ -4,7 +4,7 @@ Dermatology Classification using ML
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://md-class.streamlit.app/)
 
 ## GitHub Codespaces
 
