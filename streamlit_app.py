@@ -1,6 +1,14 @@
 import streamlit as st
 import joblib
 
+def load_model(filename):
+  model = joblib.load(filename)
+  return model
+  
+def predict_with_model(model, user_input):
+  prediction = model.predict([user_input])
+  return prediction[0]
+
 def main():
   st.title('Dermatology Machine Learning')
 
@@ -74,6 +82,19 @@ def main():
 
   age = st.slider('age', min_value = 0, max_value = 75, value = 40)
 
+  # Input Data for Program
+
+  user_input = [erythema, scaling, definite_borders, itching, koebner_phenomenon, polygonal_papules, follicular_papules, oral_mucosal_involvement,
+
+                knee_and_elbow_involvement, scalp_involvement, family_history, melanin_incontinence, eosinophils_infiltrate, PNL_infiltrate,
+
+                fibrosis_papillary_dermis, exocytosis, acanthosis, hyperkeratosis, parakeratosis, clubbing_rete_ridges, elongation_rete_ridges,
+
+               thinning_suprapapillary_epidermis, spongiform_pustule, munro_microabcess, focal_hypergranulosis, disappearance_granular_layer,
+
+               vacuolisation_damage_basal_layer, spongiosis, saw_tooth_appearance_retes, follicular_horn_plug, perifollicular_parakeratosis,
+
+               inflammatory_mononuclear_infiltrate, band_like_infiltrate, age]
 
 
 if __name__ == "__main__":
